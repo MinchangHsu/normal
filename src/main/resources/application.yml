@@ -9,11 +9,11 @@ spring:
         username: root
         password: 1qaz2wsx
 
-    # influx:
-    #     url: http://172.20.160.120:8086
-    #     token: hxnhyjsGC7FBmzOAvWU2yOUXqY81bt70IWznX2AcACGXWhGw5Kna7JvEoEOMcBfsXIB76A9NFBlrcvWYg73KTw==
-    #     org: caster-Orgo
-    #     bucket: caster-bucket
+    influx:
+        url: http://172.20.160.120:8086
+        token: hxnhyjsGC7FBmzOAvWU2yOUXqY81bt70IWznX2AcACGXWhGw5Kna7JvEoEOMcBfsXIB76A9NFBlrcvWYg73KTw==
+        org: caster-Orgo
+        bucket: caster-bucket
 
 mybatis:
     mapperLocations: classpath:mapper/*.xml

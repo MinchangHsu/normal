@@ -30,8 +30,8 @@ public class MenuController {
     @Autowired
     MenuMapper mapper;
 
-    //@Autowired
-    //TimeSeriesRepository repository;
+    @Autowired
+    TimeSeriesRepository repository;
 
     @GetMapping("/test")
     public ResponseEntity test(){
@@ -55,10 +55,10 @@ public class MenuController {
 
     @GetMapping("/add/{type}")
     public ResponseEntity add(@PathVariable String type){
-        // Map<String, Object> map = new HashMap<>();
-        // map.put("type", type);
-        // map.put("val", Long.valueOf(RandomUtils.nextLong(0, 1000)));
-        // repository.save("caster_001", map);
+        Map<String, Object> map = new HashMap<>();
+        map.put("type", type);
+        map.put("val", Long.valueOf(RandomUtils.nextLong(0, 1000)));
+        repository.save("caster_001", map);
 
         return ResponseEntity.ok("Add success.");
     }
