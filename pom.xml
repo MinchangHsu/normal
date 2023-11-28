@@ -73,27 +73,6 @@
 			<artifactId>json</artifactId>
 			<version>20231013</version>
 		</dependency>
-
-<!--		用InfluxDB + Grafana 監控Springboot應用 -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
-
-<!--		influx v1.8 used -->
-<!--		<dependency>-->
-<!--			<groupId>io.micrometer</groupId>-->
-<!--			<artifactId>micrometer-registry-influx</artifactId>-->
-<!--		</dependency>-->
-
-		<dependency>
-			<groupId>com.influxdb</groupId>
-			<artifactId>influxdb-client-java</artifactId>
-			<version>6.10.0</version>
-		</dependency>
-
-
-
 	</dependencies>
 
 	<build>
