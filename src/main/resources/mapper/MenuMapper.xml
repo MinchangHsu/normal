@@ -4,5 +4,16 @@
     <select id="findAll" resultType="com.caster.normal.entity.Menu">
         select id, name, url, text from cf_menu
     </select>
+    <select id="findById" resultType="com.caster.normal.entity.Menu" parameterType="java.lang.Long">
+        select id, name, url, text from cf_menu where id = #{id}
+    </select>
+
+    <update id="updateById" parameterType="com.caster.normal.entity.Menu">
+        update cf_menu set text = #{text} where id = #{id}
+    </update>
+
+    <insert id="insert" parameterType="com.caster.normal.entity.Menu" useGeneratedKeys="true" keyProperty="id" keyColumn="id" >
+        insert into cf_menu (text) values (#{text})
+    </insert>
 
 </mapper>

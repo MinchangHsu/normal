@@ -2,6 +2,7 @@ package com.caster.normal.mapper;
 
 import com.caster.normal.entity.Menu;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -12,5 +13,8 @@ import java.util.List;
 @Mapper
 public interface MenuMapper {
     List<Menu> findAll();
+    Menu findById(@Param("id")Long id);
+    int updateById(Menu record);
+    void insert(Menu record);
 
 }

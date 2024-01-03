@@ -3,15 +3,25 @@ spring:
         name: normal-project
     datasource:
         driver-class-name: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://172.20.160.120:3308/normal
+#        url: jdbc:mysql://172.20.160.120:3308/normal
 #        url: jdbc:mysql://172.20.160.120:3309/normal
-#        url: jdbc:mysql://10.96.100.155:3309/normal
+#        url: jdbc:mysql://172.20.160.120:3309/normal
+        url: jdbc:mysql://10.98.117.191:3309/normal
         username: root
         password: 1qaz2wsx
 
 mybatis:
     mapperLocations: classpath:mapper/*.xml
 
-#logging:
-#    level:
-#        root: DEBUG
+logging:
+    file.name: var/log/normal.log
+    pattern:
+        console: "%d %-5level %logger : %msg%n"
+        file: "%d %-5level [%thread] %logger : %msg%n"
+    level:
+        org.springframework.web: ERROR
+        com.caster.normal: DEBUG
+        org.hibernate: ERROR
+
+customer:
+    appVersion: V1.0.5
